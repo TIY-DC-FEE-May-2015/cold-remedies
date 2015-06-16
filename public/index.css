@@ -20,6 +20,15 @@
 	text-align: center;
 	font-size: 48px;
 	display: block;
+	margin: 10px 0px;
+}
+
+button {
+	width: 330px;
+	height: 40px;
+	font-size: 12px;
+	padding: 5px;
+	margin: 10px 0px
 }
 
 #sort {
@@ -52,4 +61,13 @@
 
 .hidden {
 	display: none;
+}
+
+.close {
+	color: rgb(150, 150, 150);
+}
+
+.footer {
+	display: block;
+	text-align: center;
 }

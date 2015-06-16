@@ -27,35 +27,35 @@ $(document).on("ready", function() {
 
 // Prevention value changes to text
 					if (remedyObj.prevention === 3) {
-						remedyObj.prevention = "Probably Effective"
+						remedyObj.prevention = "😄"
 					}
 
 					if (remedyObj.prevention === 2) {
-						remedyObj.prevention = "Possibly Effective"
+						remedyObj.prevention = "😐"
 					}
 
 					if (remedyObj.prevention === 1) {
-						remedyObj.prevention = "Unlikely to be Effective"
+						remedyObj.prevention = "😕"
 					}
 
 					if (remedyObj.prevention === 0) {
-						remedyObj.prevention = "Ineffective"
+						remedyObj.prevention = "😞"
 					}
 // Treatment value changes to text
 					if (remedyObj.treatment === 3) {
-						remedyObj.treatment = "Probably Effective"
+						remedyObj.treatment = "😄"
 					}
 
 					if (remedyObj.treatment === 2) {
-						remedyObj.treatment = "Possibly Effective"
+						remedyObj.treatment = "😐"
 					}
 
 					if (remedyObj.treatment === 1) {
-						remedyObj.treatment = "Unlikely to be Effective"
+						remedyObj.treatment = "😕"
 					}
 
 					if (remedyObj.treatment === 0) {
-						remedyObj.treatment = "Ineffective"
+						remedyObj.treatment = "😞"
 					}
 
 // Append to Template
@@ -65,11 +65,10 @@ $(document).on("ready", function() {
 
 				})
 				
-
 			})
 			
 			$(".name").on("click", function() {
-				$(".info").toggleClass("hidden")
+				$(this).find(".info").toggleClass("hidden")
 			})
 		}
 	
