@@ -1,5 +1,6 @@
 remedies = {}
 templates = {}
+
 sortVal = "score"
 
 var numberSub = function(i) {
@@ -32,7 +33,7 @@ var getRemedies = function(callback) {
 }
 
 var listRemedies = function(data) {
-	var sortedList = []
+	sortedList = []
 	_.each(data.remedies, function (remedy) {
 		var formattedRemedy = {
 			name: remedy.name,
@@ -45,25 +46,43 @@ var listRemedies = function(data) {
 			treatmentScore: remedy.treatment,
 		}
 		sortedList.push(formattedRemedy)
+
+		listByScore(sortedList)
+
+		_.each(sortedList, function(item){
+		var $htmlString = templates.remedies(item)
+		$(".copy-location").append($htmlString)
+		})
 	})
 
 	//sortedList = _.sortBy(sortedList, "score")
 	//sortedList.reverse()
-	sortedList = listBy(sortedList, sortVal)
+	//sortedList = listByPrevention(sortedList)
 
-	_.each(sortedList, function(item){
-		var $htmlString = templates.remedies(item)
-		$(".copy-location").append($htmlString)
-	})
+
 }
 
+var listBy = function(arr, str) {
+	arr = _.sortBy(arr, str)
+	arr.reverse()	
+	console.log(arr)
 
-var listBy = function(array, str) {
-	array = _.sortBy(array, str)
+}
+
+var listByPrevention = function(array) {
+	array = _.sortBy(array, "preventionScore")
 	return array.reverse()	
 }
 
+var listByTreatment = function(array) {
+	array = _.sortBy(array, "treatmentScore")
+	return array.reverse()	
+}
 
+var listByScore = function(array) {
+	array = _.sortBy(array, "score")
+	return array.reverse()	
+}
 
 
 
@@ -73,25 +92,13 @@ $(document).on("ready", function(){
 //make a call for rememdies
 	templates.remedies = Handlebars.compile($("#remediesTemplate").html())
 	
+
+
 	getRemedies(listRemedies)
 
-	$("#prevention").on("click", function(){
-		$(".copy-location").html("")
-		sortVal = "preventionScore"
-		getRemedies(listRemedies)
-	})
 
-	$("#treatment").on("click", function(){
-		$(".copy-location").html("")
-		sortVal = "treatmentScore"
-		getRemedies(listRemedies)
-	})
 
-	$("#score").on("click", function(){
-		$(".copy-location").html("")
-		sortVal = "score"
-		getRemedies(listRemedies)
-	})
+//on success, place those remedies in the dom
 
 
 })

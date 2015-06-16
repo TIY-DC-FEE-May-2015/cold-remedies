@@ -6,6 +6,35 @@
 </head>
 <body>
 
+<div class="container">
+	<div class="remedyBox">	
+	<div class="buttonBox">
+		Sort Remedies By...
+		<button id="prevention">Prevention</button>
+		<button id="treatment">Treatment</button>
+		<button id="score">General Effectiveness</button>
+	</div>
+
+
+		<div class="copy-location"></div>
+	</div>
+</div>
+
+
+
+
+<template id="remediesTemplate">
+	<div class="remedy score{{score}}">
+		<h2 class="name">{{name}}</h2>
+		<h3 class="prevention">&#9879  This remedy is considered {{prevention}} in preventing colds.</h3>
+		<h3 class="treatment">&#9879  This remedy is considered {{treatment}} in treating cold symptoms.</h3>
+		<p class="description">{{description}}</p>
+		<p class="reactions">{{reactions}}</p>
+	</div>
+</template>
+
+
+
   <script src="libs/jquery.js"></script>
   <script src="libs/handlebars.js"></script>
   <script src="libs/underscore.js"></script>
