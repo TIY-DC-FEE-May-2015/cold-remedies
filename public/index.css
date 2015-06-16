@@ -1,1 +1,92 @@
 /* Stylesheet stuff goes here, obvi */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(http://i.imgur.com/5a8tXdj.png);
+	background-size: cover;
+}
+
+.remediesContainer {
+	display: inline-block;
+	font-family: Helvetica;
+	width: 1000px;
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+	display: block;
+}
+
+.title {
+	text-align: center;
+	font-size: 48px;
+	display: block;
+	margin: 10px 0px;
+}
+
+button {
+	width: 330px;
+	height: 40px;
+	font-size: 12px;
+	padding: 5px;
+	margin: 10px 0px
+}
+
+#sort {
+	text-align: center;
+	display: block;
+	font-size: 18px;
+}
+
+.remedy {
+	padding: 5px 10px;
+	margin: 10px 20px;
+	width: 450px;
+	border: solid 1px black;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+.content {
+	display: block;
+	padding: 5px 0px;
+	margin: 3px 0px;
+	border-top: solid 1px black;
+}
+
+.content:first-of-type {
+	border-top: none;
+}
+
+.name {
+	font-size: 24px;
+}
+
+.remedy:hover {
+	background: rgb(110, 215, 227);
+	color: white;
+}
+
+.info {
+	font-size: 18px;
+	display: block
+}
+
+.hidden {
+	display: none;
+}
+
+.close {
+	color: rgb(150, 150, 150);
+}
+
+.footer {
+	display: block;
+	text-align: center;
+}

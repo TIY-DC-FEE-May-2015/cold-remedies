@@ -6,6 +6,54 @@
 </head>
 <body>
 
+	<div class="remediesContainer">
+
+		<div class="header">
+			<span class="title">Defeat the Cold!</span>
+
+
+			<p class="descrip">Think you know what will make you feel better? Click below to learn more!</p>
+
+		</div>
+
+		<div class="listOfRemedies">
+
+		</div>
+
+		<div class="footer">
+			
+			<button id="treatmentList">Sort by Treatment Effectiveness</button>
+
+			<button id="preventionList">Sort by Prevention Effectiveness</button>
+		</div>
+
+	</div>
+
+
+
+<!-- Start of Template -->
+	<template id="coldRemediesTemplate">
+		
+		<div class="remedy">
+			<span class="name content"><b>{{name}}</b>
+
+				<div class="info hidden">
+
+					<span class="treatment content"><b>Treatment:</b> {{treatment}}</span>
+
+					<span class="prevention content"><b>Prevention:</b> {{prevention}}</span>
+
+					<span class="description content"><b>Description:</b> {{description}}</span>
+
+					<span class="reactions content"><b>Reactions:</b> {{reactions}}</span>
+
+					<span class="close content">[Click anywhere in this box to collapse]</span>
+				</div>
+			</span>
+		</div>
+
+	</template>
+
   <script src="libs/jquery.js"></script>
   <script src="libs/handlebars.js"></script>
   <script src="libs/underscore.js"></script>
