@@ -5,6 +5,11 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-image: url(http://i.imgur.com/5a8tXdj.png);
+	background-size: cover;
+}
+
 .remediesContainer {
 	display: inline-block;
 	font-family: Helvetica;
@@ -61,6 +66,11 @@ button {
 
 .name {
 	font-size: 24px;
+}
+
+.remedy:hover {
+	background: rgb(110, 215, 227);
+	color: white;
 }
 
 .info {
