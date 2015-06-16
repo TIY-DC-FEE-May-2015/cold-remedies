@@ -6,26 +6,45 @@
 </head>
 <body>
 
-	<div class="listOfRemedies">
+	<div class="remediesContainer">
+
+		<div class="header">
+			<span class="title">Defeat the Cold!</span>
+
+			<button id="treatmentList">Sort by Treatment Effectiveness</button>
+
+			<button id="preventionList">Sort by Prevention Effectiveness</button>
+
+		</div>
+
+		<div class="listOfRemedies">
+
+		</div>
 
 	</div>
+
 
 
 <!-- Start of Template -->
 	<template id="coldRemediesTemplate">
 		
-		<div class="remedy">
-			<span class="name content"><b>Name:</b> {{name}}</span>
+		<ul class="remedyList">
+			<div class="remedy">
+				<span class="name content"><b>{{name}}</b></span>
 
-			<span class="treatment content"><b>Treatment:</b> {{treatment}}</span>
+				<div class="info hidden">
 
-			<span class="prevention content"><b>Prevention:</b> {{prevention}}</span>
+					<span class="treatment content"><b>Treatment:</b> {{treatment}}</span>
 
-			<span class="description content"><b>Description:</b> {{description}}</span>
+					<span class="prevention content"><b>Prevention:</b> {{prevention}}</span>
 
-			<span class="reactions content"><b>Reactions:</b> {{reactions}}</span>
+					<span class="description content"><b>Description:</b> {{description}}</span>
 
-		</div> 
+					<span class="reactions content"><b>Reactions:</b> {{reactions}}</span>
+				</div>
+
+			</div>
+		</ul>
 
 	</template>
 
