@@ -25,6 +25,16 @@ $(document).on("ready", function() {
 						reactions: remedy.reactions
 					}
 
+					$("#preventionList").on("click", function() {
+						remedyArray.push(remedyObj)
+						remedyArray.sort(function(a, b) {
+							return parseFloat(a.prevention) - parseFloat(b.prevention)
+						})
+						console.log(remedyObj = _.each(remedyArray))
+
+					})
+
+
 // Prevention value changes to text
 					if (remedyObj.prevention === 3) {
 						remedyObj.prevention = "😄"
@@ -70,6 +80,7 @@ $(document).on("ready", function() {
 			$(".name").on("click", function() {
 				$(this).find(".info").toggleClass("hidden")
 			})
+
 		}
 	
 	})
