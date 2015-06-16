@@ -1,1 +1,91 @@
-/* Stylesheet stuff goes here, obvi */
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	font-weight: normal;
+	margin: 5px 0px 10px 5px;
+	font-size: 16px;
+}
+
+p {
+	text-align: justify;
+}
+
+body {
+	background-color: RGB(246, 246, 246);
+	font-family: monospace;
+	font-size: 15px;
+}
+
+button {
+	font-size: 13px;
+	padding: 2px;
+	font-family: arial;
+}
+
+button:hover {
+ 	background-color: RGBA(0, 139, 222, .9);
+ 		font-size: 13px;
+	padding: 2px;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+.buttonBox {
+	width: 800px;
+	text-align: center;
+	padding-top: 25px;
+}
+
+.remedyBox {
+	margin: 0px auto;
+	width: 800px;
+
+	background-color: white;
+}
+
+.remedy {
+	padding: 25px 35px;
+	margin: 25px 20px;
+	border-radius: 30px;
+	
+}
+
+.score6 {
+
+	background: linear-gradient(to bottom, RGBA(0, 125, 220, 1), RGBA(0, 230, 250, 1));
+}
+
+.score5 {
+	background: linear-gradient(to bottom, RGBA(0, 125, 220, .9), RGBA(0, 230, 250, .9));
+}
+
+.score4 {
+	background: linear-gradient(to bottom, RGBA(0, 125, 220, .8), RGBA(0, 230, 250, .8));
+}
+
+.score3 {
+	background: linear-gradient(to bottom, RGBA(0, 125, 220, .7), RGBA(0, 230, 250, .7));
+}
+
+.score2 {
+	background: linear-gradient(to bottom, RGBA(0, 125, 220, .6), RGBA(0, 230, 250, .7));
+}
+
+.score1 {
+	background: linear-gradient(to bottom, RGBA(0, 125, 220, .5), RGBA(0, 230, 250, .6));
+}
+
+.score0 {
+	background: linear-gradient(to bottom, RGBA(0, 125, 220, .4), RGBA(0, 230, 250, .5));
+}
