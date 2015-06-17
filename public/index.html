@@ -2,13 +2,41 @@
 <html>
 <head>
   <title>Cold Remedies List</title>
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
+
+		<div class= "button-container">
+			<button id ="Ineffective">Ineffective</button>
+			<button id = "Unlikely">Unlikely to be effective</button>
+			<button id = "Possibly">Possibly effective</button>
+			<button id = "Probably">Probably effective</button>
+		</div>
+	<div id="left-spot"></div>
+
+			
+
+		<div class ="container">
+			<template id = "left-side">
+				<div id = "leftList">
+				<div class ="leftNames">
+					<div class = "id">{{ id }}</div>
+					<div class = "description">{{ description }}</div>
+					<div class = "name">{{ name }}</div>
+					<div class = "prevention">{{ prevention }}</div>
+					<div class = "treatment">{{ treatment }}</div>
+					
+					<div class = "reactions">{{ reactions }}</div>
+				</div>	
+				</div>
+			</template>
+		</div>		
+
 
   <script src="libs/jquery.js"></script>
   <script src="libs/handlebars.js"></script>
   <script src="libs/underscore.js"></script>
+  <script src="remedies.js"></script>
 
   <script src="index.js"></script>
 
