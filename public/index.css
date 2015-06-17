@@ -1,1 +1,52 @@
-/* Stylesheet stuff goes here, obvi */
+*{
+margin:0;
+padding:0;
+box-sizing: border-box
+}
+
+body{
+	margin:40px;
+}
+
+#left-spot{
+	margin:20px;
+	width:76%;
+	display: inline-block;
+	position: relative;
+}
+
+
+
+.button-container{
+	margin-left:30%;
+	display:inline-block;
+}
+
+#leftList{
+	margin:40px;
+	padding:30px;
+	margin-bottom: 80px;
+	position:relative;
+	background-color:#FEFEFE;
+	border:2px solid black;
+}
+.description{
+	display:none;
+	width:40%;
+}
+
+.description.active{
+	display:inline-block;
+	height:auto;
+	float:right;
+}
+
+
+.name{
+	font-size:30px;
+}
+
+.leftNames{
+	display: inline-block;
+	background-color: #FEFEFE;
+}
