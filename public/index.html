@@ -5,11 +5,28 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+ <div class="container">
+ 	<div id="main-content"> <h1>Pick Your Remedy</h1></div>
+ </div>
+
+<template id="rem">
+	<div class="all">
+		<div class= "name">{{name}}</div>
+		<span class= "prevent"><img src="img/prevent-emoji.png" class="emoji"/>{{prevention}}</span>
+		<span class= "treat"><img src="img/pill.png" class="emoji"/>{{treatment}}</span>
+
+		<div class="other hidden">
+		
+			<div><strong>Overview: </strong>{{description}}</div>
+			<div><strong>Reactions: </strong>{{reactions}}	</div>
+		</div>
+	</div>
+	
+</template>
 
   <script src="libs/jquery.js"></script>
   <script src="libs/handlebars.js"></script>
   <script src="libs/underscore.js"></script>
-
   <script src="index.js"></script>
 
 </body>
